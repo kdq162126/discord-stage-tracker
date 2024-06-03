@@ -6,10 +6,7 @@ from discord import app_commands
 from discord.ext import commands
 from datetime import datetime
 from gsheet.gsheet import GoogleSheet
-from dotenv import load_dotenv
 
-
-load_dotenv()
 
 TABLE_RANGE = 'A1:D1'
 gs = GoogleSheet()
@@ -103,6 +100,3 @@ async def on_voice_state_update(member, before, after):
             ws.format(TABLE_RANGE, {'textFormat': {'bold': True}})
 
         ws.append_row([str(member), action, channel.name, now], table_range=TABLE_RANGE)
-
-
-bot.run(os.getenv('BOT_TOKEN'))
