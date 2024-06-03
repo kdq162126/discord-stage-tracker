@@ -2,12 +2,12 @@
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
-      "command": "pip install -r requirements.txt ",
-      "name": "p"
+      "name": "p",
+      "command": "pip install -r requirements.txt "
     },
     {
-      "command": "python main.py",
-      "name": "p"
+      "name": "p",
+      "command": "python main.py"
     }
   ],
 
